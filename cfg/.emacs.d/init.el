@@ -22,6 +22,11 @@
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x C-f") 'helm-for-files)
 
+;; Dired
+(defun configure-dired () "Set up needed config for Dired."
+       (local-set-key (kbd "C-x C-f") 'find-file))
+(add-hook 'dired-mode-hook #'configure-dired)
+
 ;; ParEdit
 (autoload #'enable-paredit-mode "paredit" "Enable paredit." t)
 (add-hook 'emacs-lisp-mode-hook #'enable-paredit-mode)
