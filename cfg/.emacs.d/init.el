@@ -27,6 +27,12 @@
 (add-hook 'emacs-lisp-mode-hook #'enable-paredit-mode)
 (add-hook 'lisp-mode-hook #'enable-paredit-mode)
 
+;; GH-MD
+(autoload #'gh-md-render-buffer "gh-md" "Render buffer with GH-MD." t)
+(defun configure-gh-md () "Set up needed config for GH-MD."
+       (local-set-key (kbd "C-c C-c p") 'gh-md-render-buffer))
+(add-hook 'markdown-mode-hook #'configure-gh-md)
+
 ;; Theme
 (load-theme 'base16-eighties t)
 (menu-bar-mode -1)
