@@ -55,9 +55,9 @@
  '(icomplete-mode nil)
  '(package-selected-packages
    (quote
-    (gh-md markdown-mode company base16-theme flycheck magit paredit slime helm))))
+    (helm-projectile projectile indium js2-mode gh-md markdown-mode company base16-theme flycheck magit paredit slime helm))))
 (custom-set-faces
- ;; custom-set-faces was added by Custom.
+ ;; custom-set-faces added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
