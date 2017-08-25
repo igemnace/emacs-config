@@ -27,6 +27,9 @@
        (local-set-key (kbd "C-x C-f") 'find-file))
 (add-hook 'dired-mode-hook #'configure-dired)
 
+;; Org
+(global-set-key (kbd "C-x M-o") 'org-agenda)
+
 ;; ParEdit
 (autoload #'enable-paredit-mode "paredit" "Enable paredit." t)
 (add-hook 'emacs-lisp-mode-hook #'enable-paredit-mode)
@@ -64,11 +67,12 @@
    (quote
     ("9be1d34d961a40d94ef94d0d08a364c3d27201f3c98c9d38e36f10588469ea57" default)))
  '(icomplete-mode nil)
+ '(org-agenda-files (quote ("~/org/")))
  '(package-selected-packages
    (quote
     (helm-projectile projectile indium js2-mode gh-md markdown-mode company base16-theme flycheck magit paredit slime helm))))
 (custom-set-faces
- ;; custom-set-faces added by Custom.
+ ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
