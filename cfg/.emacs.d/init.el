@@ -28,6 +28,10 @@
 
 ;; Org
 (global-set-key (kbd "C-x M-o") 'org-agenda)
+(defun configure-org () "Set up needed config for Org mode."
+       (set-fill-column 80)
+       (auto-fill-mode))
+(add-hook 'org-mode-hook #'configure-org)
 
 ;; ParEdit
 (autoload #'enable-paredit-mode "paredit" "Enable paredit." t)
