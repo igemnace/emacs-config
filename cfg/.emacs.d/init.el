@@ -12,7 +12,7 @@
 
 ;; SLIME
 (setq inferior-lisp-program "/usr/bin/sbcl")
-(add-to-list 'load-path "/usr/share/emacs/site-lisp/slime/")
+(add-to-list 'slime-contribs 'slime-repl)
 (require 'slime)
 (slime-setup)
 
