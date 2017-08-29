@@ -16,10 +16,13 @@
 (require 'slime)
 (slime-setup)
 
-;; Helm
-(global-set-key (kbd "C-x b") 'helm-buffers-list)
-(global-set-key (kbd "M-x") 'helm-M-x)
-(global-set-key (kbd "C-x C-f") 'helm-for-files)
+;; Ivy
+(with-eval-after-load "ivy"
+  (ivy-mode 1))
+
+;; Counsel
+(with-eval-after-load "counsel"
+  (counsel-mode))
 
 ;; Dired
 (defun configure-dired () "Set up needed config for Dired."
@@ -73,7 +76,7 @@
  '(org-agenda-files (quote ("~/org/")))
  '(package-selected-packages
    (quote
-    (helm-projectile projectile indium js2-mode gh-md markdown-mode company base16-theme flycheck magit paredit slime helm))))
+    (counsel ivy swiper projectile indium js2-mode gh-md markdown-mode company base16-theme flycheck magit paredit slime))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
