@@ -47,6 +47,10 @@
        (local-set-key (kbd "C-c C-c p") 'gh-md-render-buffer))
 (add-hook 'markdown-mode-hook #'configure-gh-md)
 
+;; Company
+(require 'company)
+(add-to-list 'company-backends 'company-tern)
+
 ;; Theme
 (load-theme 'base16-eighties t)
 (menu-bar-mode -1)
@@ -76,7 +80,7 @@
  '(org-agenda-files (quote ("~/org/")))
  '(package-selected-packages
    (quote
-    (counsel ivy swiper projectile indium js2-mode gh-md markdown-mode company base16-theme flycheck magit paredit slime))))
+    (company-tern counsel ivy swiper projectile indium js2-mode gh-md markdown-mode company base16-theme flycheck magit paredit slime))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
