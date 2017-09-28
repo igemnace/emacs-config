@@ -50,6 +50,24 @@
 ;; Company
 (require 'company)
 (add-to-list 'company-backends 'company-tern)
+(global-company-mode)
+
+;; JavaScript
+(defun configure-javascript () "Set up Javascript-specific config."
+       (flycheck-mode 1)
+       (setq
+	indent-tabs-mode nil
+	js-indent-level 2))
+(add-hook 'javascript-mode-hook #'configure-javascript)
+(add-hook 'js2-mode-hook #'configure-javascript)
+
+;; JSX
+(defun run-react-native-menu () "Use adb to open React Native's dev menu."
+       (interactive)
+       (shell-command "adb shell input keyevent 82"))
+(defun configure-jsx () "Set up JSX-specific config."
+       (local-set-key (kbd "f5") #'run-react-native-menu))
+(add-hook 'rjsx-mode-hook #'configure-jsx)
 
 ;; Theme
 (load-theme 'base16-eighties t)
