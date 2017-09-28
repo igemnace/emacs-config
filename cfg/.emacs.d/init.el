@@ -80,7 +80,7 @@
  '(org-agenda-files (quote ("~/org/")))
  '(package-selected-packages
    (quote
-    (company-tern counsel ivy swiper projectile indium js2-mode gh-md markdown-mode company base16-theme flycheck magit paredit slime))))
+    (rjsx-mode company-tern counsel ivy swiper projectile indium js2-mode gh-md markdown-mode company base16-theme flycheck magit paredit slime))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
